@@ -4,12 +4,15 @@
 
 const getFirstNames = arr => {
   const userFirstNames = [];
-  for (let user of arr) {
-    // Your code goes here ...
-  }
+   for (let user of arr) {
+    userFirstNames.push(user.firstName);    
+  
+   }
+  return userFirstNames;
 };
 
 getFirstNames(usersArray);
+
 // expected output:
 // [ 'Kirby', 'Tracie', 'Kendra', 'Kinney', 'Howard', 'Rachelle', 'Lizzie' ]
 
@@ -18,7 +21,12 @@ getFirstNames(usersArray);
 // ***************************************************************************
 
 const getFullNames = arr => {
-  // Your code goes here ...
+  const userFullNames = [];
+  for (let user of arr) {
+   userFullNames.push(`${user.firstName} ${user.lastName}`);    
+ 
+  }
+ return userFullNames;
 };
 
 getFullNames(usersArray);
@@ -31,10 +39,17 @@ getFullNames(usersArray);
 // ***************************************************************************
 
 const getUsersCreditDetails = arr => {
-  // Your code goes here ...
-};
+  let userDetails = [];
+   for (let user of arr) {
+   const {firstName, lastName, balance} = user;
+     let Details = {firstName, lastName, balance};
+     userDetails.push(Details);      
+    }
+   
+ console.log(userDetails);
+ };
+ getUsersCreditDetails(usersArray);
 
-getUsersCreditDetails(usersArray);
 // expected output:
 // [ { firstName: 'Kirby', lastName: 'Doyle', balance: '$3,570.06' },
 // { firstName: 'Tracie', lastName: 'May', balance: '$1,547.73' },
@@ -49,8 +64,9 @@ getUsersCreditDetails(usersArray);
 // ***************************************************************************
 
 const genderView = users => {
-  // Your code goes here ...
-};
+  const maleUser = genderView.filter
+    }
+;
 
 genderView(usersArray);
 // expected output:
